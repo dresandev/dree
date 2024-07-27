@@ -3,6 +3,7 @@
 	z-index: 10;
 	inset-block-start: 0;
 	inset-inline-end: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
 .link svg {

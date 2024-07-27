@@ -1,4 +1,4 @@
 .wrapper {
 	display: flex;
-	column-gap: clamp(1.125rem, 1.034rem + 0.388vw, 1.5rem);
+	column-gap: clamp(18px, 16.544px + 0.388vw, 24px);
 }
