@@ -1,0 +1,17 @@
+.header {
+	min-block-size: 64px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	padding-block: 20px;
+}
+
+.dreeLogo {
+	margin-inline-end: auto;
+}
+
+.nothing {
+	margin-inline-start: auto;
+}

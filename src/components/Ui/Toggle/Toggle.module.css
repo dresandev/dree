@@ -1,0 +1,33 @@
+.toggle {
+	color: currentColor;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	padding-inline: 12px;
+	block-size: 40px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 20px;
+	transition-property: color, background-color;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
+.toggle:disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.toggle:hover {
+	color: hsl(var(--text-color-hsl) / 0.6);
+}
+
+.toggle:hover,
+.toggle[data-state="on"] {
+	background-color: hsl(220 7% 16%);
+}
+
+.toggle[data-state="on"] {
+	color: var(--text-color);
+}

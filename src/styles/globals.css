@@ -1,0 +1,24 @@
+:root {
+	--text-color-hsl: 220 5% 89%;
+
+	--bg-color: hsl(0 0% 2%);
+	--bg-secondary-color: hsl(225 10% 8%);
+	--text-color: hsl(220 5% 89%);
+	--primary-color: hsl(226 79% 68%);
+	--border-radius: 8px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-block-size: 100vh;
+	padding-inline: 32px;
+	font-size: 16px;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+:focus-visible {
+	outline: 2px solid hsl(0 0% 65%);
+	outline-offset: 2px;
+}

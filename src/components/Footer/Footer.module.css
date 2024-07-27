@@ -1,0 +1,13 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-block-size: 64px;
+	text-align: center;
+	padding-block: 20px;
+}
+
+.link {
+	color: var(--primary-color);
+	font-weight: 500;
+}
