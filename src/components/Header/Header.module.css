@@ -3,7 +3,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
-	justify-content: center;
 	align-items: center;
 	padding-block: 20px;
 }
@@ -13,5 +12,6 @@
 }
 
 .nothing {
+	flex-basis: 73px;
 	margin-inline-start: auto;
 }

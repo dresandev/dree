@@ -1,4 +1,5 @@
 .wrapper {
+	/* TODO: improvements? */
 	flex: 1 1 478px;
 	padding: 10px;
 	overflow-x: auto;

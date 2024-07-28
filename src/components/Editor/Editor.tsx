@@ -1,20 +1,18 @@
 "use client"
 
-import { useState } from "react"
 import SimpleEditor from "react-simple-code-editor"
+import { useTreeStore } from "~/store/use-tree"
 import styles from "./Editor.module.css"
 
 export const Editor = () => {
-	const [code, setCode] = useState(`component-name
-  component-name.module.css
-  component-name.tsx
-  index.ts`)
+	const source = useTreeStore((state) => state.source)
+	const setSource = useTreeStore((state) => state.setSource)
 
 	return (
 		<SimpleEditor
 			className={styles.wrapper}
-			value={code}
-			onValueChange={setCode}
+			value={source}
+			onValueChange={setSource}
 			highlight={(code) => code}
 			padding={10}
 		/>

@@ -1,4 +1,5 @@
 .wrapper {
 	display: flex;
-	column-gap: clamp(18px, 16.544px + 0.388vw, 24px);
+	flex-wrap: wrap;
+	gap: clamp(18px, 16.544px + 0.388vw, 24px);
 }
