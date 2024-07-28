@@ -3,9 +3,12 @@
 import { useTreeStore } from "~/store/use-tree"
 import { generateTree } from "~/helpers/generate-tree"
 import { parseInput } from "~/helpers/parse-input"
-import styles from "./Tree.module.css"
 
-export const Tree = () => {
+interface Props {
+	className?: string
+}
+
+export const Tree: React.FC<Props> = ({ className }) => {
 	const source = useTreeStore((state) => state.source)
 	const { fancy, ...preferences } = useTreeStore((state) => state.preferences)
 
@@ -14,5 +17,5 @@ export const Tree = () => {
 		...preferences,
 	})
 
-	return <pre className={styles.wrapper}>{tree}</pre>
+	return <pre className={className}>{tree}</pre>
 }

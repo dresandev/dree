@@ -4,3 +4,11 @@
 	flex-wrap: wrap;
 	gap: 20px;
 }
+
+.playground {
+	flex: 1 1 478px;
+	padding: 10px;
+	overflow-x: auto;
+	background-color: var(--bg-secondary-color);
+	border-radius: var(--border-radius);
+}

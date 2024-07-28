@@ -5,8 +5,8 @@ import styles from "./page.module.css"
 export default function Home() {
 	return (
 		<main className={styles.main}>
-			<Editor />
-			<Tree />
+			<Editor className={styles.playground} />
+			<Tree className={styles.playground} />
 		</main>
 	)
 }
