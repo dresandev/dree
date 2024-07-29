@@ -2,7 +2,7 @@
 
 import clsx from "clsx"
 import SimpleEditor from "react-simple-code-editor"
-import { useTreeStore } from "~/store/use-tree"
+import { useTreeStore } from "~/store/use-tree-store"
 import styles from "./Editor.module.css"
 
 interface Props {

@@ -1,7 +1,7 @@
 "use client"
 
 import clsx from "clsx"
-import { useTreeStore } from "~/store/use-tree"
+import { useTreeStore } from "~/store/use-tree-store"
 import { generateTree } from "~/helpers/generate-tree"
 import { parseInput } from "~/helpers/parse-input"
 import { CopyButton } from "~/components/CopyButton"

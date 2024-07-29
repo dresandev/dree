@@ -1,6 +1,6 @@
 "use client"
 
-import { useTreeStore } from "~/store/use-tree"
+import { useTreeStore } from "~/store/use-tree-store"
 import { Toggle } from "~/components/Ui/Toggle"
 import styles from "./Preferences.module.css"
 
