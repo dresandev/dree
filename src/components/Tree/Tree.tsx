@@ -1,8 +1,11 @@
 "use client"
 
+import clsx from "clsx"
 import { useTreeStore } from "~/store/use-tree"
 import { generateTree } from "~/helpers/generate-tree"
 import { parseInput } from "~/helpers/parse-input"
+import { CopyButton } from "~/components/CopyButton"
+import styles from "./Tree.module.css"
 
 interface Props {
 	className?: string
@@ -17,5 +20,10 @@ export const Tree: React.FC<Props> = ({ className }) => {
 		...preferences,
 	})
 
-	return <pre className={className}>{tree}</pre>
+	return (
+		<div className={clsx(styles.wrapper, className)}>
+			<CopyButton className={styles.copyButton} text={tree} />
+			<pre>{tree}</pre>
+		</div>
+	)
 }

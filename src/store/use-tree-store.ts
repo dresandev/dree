@@ -1,4 +1,5 @@
 import { create } from "zustand"
+import { persist } from "zustand/middleware"
 
 interface Preferences {
 	fancy?: boolean
@@ -25,14 +26,22 @@ const INIT_STATE = {
 	},
 }
 
-export const useTreeStore = create<TreeState>()((set) => ({
-	...INIT_STATE,
-	setSource: (source) => set((state) => ({ source })),
-	setPreferences: (preferences) =>
-		set((state) => ({
-			preferences: {
-				...state.preferences,
-				...preferences,
+export const useTreeStore = create<TreeState>()(
+	persist(
+		(set, get) => ({
+			...INIT_STATE,
+			setSource: (source) => set({ source }),
+			setPreferences: (newPreferences) => {
+				const { preferences } = get()
+
+				return set({
+					preferences: {
+						...preferences,
+						...newPreferences,
+					},
+				})
 			},
-		})),
-}))
+		}),
+		{ name: "source" }
+	)
+)

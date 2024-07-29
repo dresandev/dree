@@ -1,0 +1,9 @@
+.wrapper {
+	position: relative;
+}
+
+.copyButton {
+	position: absolute;
+	inset-block-start: var(--playground-padding);
+	inset-inline-end: var(--playground-padding);
+}

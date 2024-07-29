@@ -1,0 +1,26 @@
+.button {
+	--size: 32px;
+	display: grid;
+	grid-template-areas: "content";
+	place-items: center;
+	inline-size: var(--size);
+	block-size: var(--size);
+	border: 1px solid hsl(240 4% 16%);
+	border-radius: 6px;
+	background-color: var(--bg-color);
+	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+	grid-area: content;
+	opacity: 0;
+}
+
+.icon.show {
+	opacity: 1;
+	transition: opacity 200ms;
+}
+
+.button:hover {
+	background-color: hsl(240 4% 16%);
+}
