@@ -1,9 +1,8 @@
 .header {
 	min-block-size: 64px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	gap: 20px;
-	align-items: center;
 	padding-block: 20px;
 }
 
@@ -12,6 +11,18 @@
 }
 
 .nothing {
-	flex-basis: 73px;
-	margin-inline-start: auto;
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.nothing {
+		display: block;
+		flex-basis: 73px;
+		margin-inline-start: auto;
+	}
 }

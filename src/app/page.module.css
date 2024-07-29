@@ -7,7 +7,7 @@
 
 .playground {
 	flex: 1 1 478px;
-	padding: 10px;
+	padding: var(--playground-padding);
 	overflow-x: auto;
 	background-color: var(--bg-secondary-color);
 	border-radius: var(--border-radius);

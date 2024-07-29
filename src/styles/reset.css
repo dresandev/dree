@@ -38,6 +38,7 @@ button {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+	color: inherit;
 }
 
 h1,
