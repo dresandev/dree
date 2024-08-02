@@ -1,8 +1,8 @@
 :root {
 	--text-color-hsl: 220 5% 89%;
 
-	--bg-color: hsl(0 0% 2%);
-	--bg-secondary-color: hsl(225 10% 8%);
+	--bg-color: hsl(240 10% 4%);
+	--bg-secondary-color: hsl(240 6% 10%);
 	--text-color: hsl(220 5% 89%);
 	--primary-color: hsl(226 79% 68%);
 	--border-radius: 8px;

@@ -17,6 +17,7 @@ export const Footer = () => {
 				>
 					tree.nathanfriend.io
 				</a>
+				.
 			</p>
 		</footer>
 	)

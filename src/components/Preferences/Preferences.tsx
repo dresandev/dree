@@ -14,11 +14,15 @@ export const Preferences = () => {
 	const preferences = useTreeStore((state) => state.preferences)
 	const setPreferences = useTreeStore((state) => state.setPreferences)
 
+	const handleOnClick = (key: string, value: string) => {
+		setPreferences({ [key]: !value })
+	}
+
 	return (
 		<div className={styles.wrapper}>
 			{Object.entries(preferences).map(([key, value]) => (
-				<Toggle key={key} pressed={value} onClick={() => setPreferences({ [key]: !value })}>
-					{preferenceLabel[key as string]}
+				<Toggle key={key} pressed={value} onClick={() => handleOnClick(key, value)}>
+					{preferenceLabel[key]}
 				</Toggle>
 			))}
 		</div>

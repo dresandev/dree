@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
 import clsx from "clsx"
-import { copyToClipboard } from "~/utils"
-import { useTimeout } from "~/hooks/use-timeout"
+import { useCopyToClipBoard } from "~/hooks/use-copy-to-clipboard"
+import { Button } from "~/components/Ui/Button"
 import { CopyIcon } from "~/components/Svg/CopyIcon"
 import { CheckIcon } from "~/components/Svg/CheckIcon"
 import styles from "./CopyButton.module.css"
@@ -17,19 +16,15 @@ const RESET_FEEDBACK_TIME = 2000
 const ICON_SIZE = 20
 
 export const CopyButton: React.FC<Props> = ({ className, text }) => {
-	const [displayFeedback, setDisplayFeedback] = useState(false)
-
-	const hideFeedback = () => setDisplayFeedback(false)
-
-	useTimeout(hideFeedback, RESET_FEEDBACK_TIME)
+	const { isCopied, copyToClipboard } = useCopyToClipBoard(text, RESET_FEEDBACK_TIME)
 
 	const handleOnClick = async () => {
-		const isCopied = await copyToClipboard(text)
-		setDisplayFeedback(isCopied)
+		await copyToClipboard()
 	}
 
 	return (
-		<button
+		<Button
+			variant="outlined"
 			className={clsx(styles.button, className)}
 			aria-label="Copy directories/files tree"
 			onClick={handleOnClick}
@@ -37,13 +32,13 @@ export const CopyButton: React.FC<Props> = ({ className, text }) => {
 			<CopyIcon
 				width={ICON_SIZE}
 				height={ICON_SIZE}
-				className={clsx(styles.icon, { [styles.show]: !displayFeedback })}
+				className={clsx(styles.icon, { [styles.show]: !isCopied })}
 			/>
 			<CheckIcon
 				width={ICON_SIZE}
 				height={ICON_SIZE}
-				className={clsx(styles.icon, { [styles.show]: displayFeedback })}
+				className={clsx(styles.icon, { [styles.show]: isCopied })}
 			/>
-		</button>
+		</Button>
 	)
 }

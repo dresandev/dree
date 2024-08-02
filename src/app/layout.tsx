@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { GitHubLink } from "~/components/GitHubLink"
 import { Header } from "~/components/Header"
 import { Footer } from "~/components/Footer"
 import "~/styles/reset.css"
@@ -21,7 +20,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<GitHubLink />
 				<Header />
 				{children}
 				<Footer />

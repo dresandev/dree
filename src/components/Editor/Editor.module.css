@@ -1,8 +1,8 @@
-.wrapper:focus-within {
-	outline: 1px solid hsl(0 0% 65%);
-	outline-offset: 2px;
+.wrapper {
+	background-color: var(--bg-secondary-color);
+	transition: border-color 150ms ease;
 }
 
-.wrapper textarea:focus-visible {
-	outline: none;
+.wrapper:focus-within {
+	border-color: hsl(240, 4%, 26%);
 }

@@ -13,13 +13,18 @@ export const Editor: React.FC<Props> = ({ className }) => {
 	const source = useTreeStore((state) => state.source)
 	const setSource = useTreeStore((state) => state.setSource)
 
+	const handleOnValueChange = (value: string) => {
+		setSource(value)
+	}
+
 	return (
 		<SimpleEditor
+			aria-label="Escructura tu sistema de archivos"
 			className={clsx(styles.wrapper, className)}
 			value={source}
-			onValueChange={setSource}
+			onValueChange={handleOnValueChange}
 			highlight={(code) => code}
-			padding={10}
+			padding="var(--playground-padding)"
 		/>
 	)
 }

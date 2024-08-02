@@ -10,19 +10,9 @@
 	margin-inline-end: auto;
 }
 
-.nothing {
-	display: none;
-}
-
 @media screen and (min-width: 768px) {
 	.header {
 		flex-direction: row;
 		align-items: center;
-	}
-
-	.nothing {
-		display: block;
-		flex-basis: 73px;
-		margin-inline-start: auto;
 	}
 }
