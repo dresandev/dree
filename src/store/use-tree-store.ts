@@ -29,11 +29,6 @@ const INIT_STATE = {
 	},
 }
 
-const storageOptions = {
-	name: "treeStore",
-	storage: createJSONStorage<TreeState & TreeActions>(() => persistentStorage),
-}
-
 const getUrlSearch = () => {
 	return window.location.search.slice(1)
 }
@@ -43,7 +38,7 @@ const persistentStorage: StateStorage = {
 		if (getUrlSearch()) {
 			const searchParams = new URLSearchParams(getUrlSearch())
 			const storedValue = searchParams.get(key)
-			return JSON.parse(storedValue as string)
+			return storedValue as string
 		} else {
 			return JSON.parse(localStorage.getItem(key) as string)
 		}
@@ -54,7 +49,6 @@ const persistentStorage: StateStorage = {
 			searchParams.set(key, JSON.stringify(newValue))
 			window.history.replaceState(null, "", `?${searchParams.toString()}`)
 		}
-
 		localStorage.setItem(key, JSON.stringify(newValue))
 	},
 	removeItem: (key): void => {
