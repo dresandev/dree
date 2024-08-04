@@ -7,6 +7,8 @@
 ## About the project
 
 Yes, Dree like Tree 🐻‍❄️, this project could be seen as a reimplementation of the project https://tree.nathanfriend.io giving it my touch on the UI and using lighter technologies.
+> [!IMPORTANT]
+> All credits for the logic to generate the diagram for https://gitlab.com/nfriend/, I only removed the use of lodash.
 
 ## Comparison of technologies
 
