@@ -8,9 +8,10 @@ import "~/styles/globals.css"
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500"] })
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://dreee.vercel.app"),
 	title: "Dree",
 	description: "Tool to generate text diagrams of folder and file structures 📁.",
-	authors: [{ name: "Dresan", url: "dresan.is-a.dev" }],
+	authors: [{ name: "Dresan", url: "dresan.dev" }],
 }
 
 export default function RootLayout({
